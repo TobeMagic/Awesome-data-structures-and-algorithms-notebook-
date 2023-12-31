@@ -561,10 +561,14 @@ def merge_pass(a, b, num):
 使用递归虽然代码比较清晰，但相对比较难懂，且性能要差一点，因为递归是将数组拆开成一个一个元素，再将其合并回去。
 ![在这里插入图片描述](classical algorithm.assets/d0be7b7b9b544a0ea7f4b84ddf2dc3d6.png)
 
+http://t.csdnimg.cn/n03JL
+
 ## 1.7 快速排序
 听到快速排序这个名字，可能就会想到这么厉害，敢叫快速，确实，作为十大算法之一的排序算法，是冒泡排序的进化，属于交换排序。
 
+参考文章：
 
+https://blog.csdn.net/qq_39181839/article/details/109478094
 
 ## 1.9 排序总结
 
