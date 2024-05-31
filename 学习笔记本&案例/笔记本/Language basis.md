@@ -32,6 +32,7 @@ var2 = 10
 
 #### 数值运算实例
 
+```
 \>>> 5 + 4 # 加法
 9
 \>>> 4.3 - 2 # 减法
@@ -46,6 +47,7 @@ var2 = 10
 2
 \>>> 2 ** 5 # 乘方
 32
+```
 
 **注意：**
 
@@ -62,10 +64,12 @@ Python 还支持复数，复数由实数部分和虚数部分构成，可以用 
 
 可以用 isinstance 来判断：
 
+```
 \>>> a = 111
 \>>> isinstance(a, int)
 True
 \>>>
+```
 
 isinstance 和 type 的区别在于：
 
@@ -173,21 +177,25 @@ RunoobTEST
 
 Python 使用反斜杠 \ 转义特殊字符，如果你不想让反斜杠发生转义，可以在字符串前面添加一个 **r**，表示原始字符串：
 
+```
 \>>> **print**('Ru**\n**oob')
 Ru
 oob
 \>>> **print**(r'Ru**\n**oob')
 Ru\noob
+```
 
 另外，反斜杠(`\`)可以作为续行符，表示下一行是上一行的延续（较少行建议使用）。也可以使用 **"""..."""** 或者 **'''...'''** 跨越多行（多行时使用）。
 
 注意，Python 没有单独的字符类型，一个字符就是长度为1的字符串。
 
-\>>> word = 'Python'
+```
+>>> word = 'Python'
 \>>> **print**(word[0], word[5])
 P n
 \>>> **print**(word[-1], word[-6])
 n P
+```
 
 与 C 字符串不同的是，Python 字符串不能被改变。**向一个索引位置赋值，比如 word[0] = 'm' 会导致错误**。（可以用list()变成list)
 
@@ -218,10 +226,11 @@ List（列表） 是 Python 中使用最频繁的数据类型。
 
 索引值以 **0** 为开始值，**-1** 为从末尾的开始位置。
 
-![img](https://markdown-1311598839.cos.ap-nanjing.myqcloud.com/list_slicing1_new1.png)
+<img src="https://markdown-1311598839.cos.ap-nanjing.myqcloud.com/list_slicing1_new1.png" alt="img" style="zoom: 33%;" />
 
 加号 **+** 是列表连接运算符，**星号 * 是重复操作**。如下实例：
 
+```
 list = [ 'abcd', 786 , 2.23, 'runoob', 70.2 ] # 定义一个列表
 tinylist = [123, 'runoob']
 
@@ -231,6 +240,7 @@ tinylist = [123, 'runoob']
 **print** (list[2:])     # 打印列表从第三个元素开始到末尾
 **print** (tinylist * 2)   # 打印tinylist列表两次
 **print** (list + tinylist) # 打印两个列表拼接在一起的结果
+```
 
 以上实例输出结果：
 
@@ -309,6 +319,7 @@ List 内置了有很多方法，例如 append()、pop() 等等，这在后面会
 
 元组中的元素类型也可以不相同：
 
+```
 tuple = ( 'abcd', 786 , 2.23, 'runoob', 70.2 )
 tinytuple = (123, 'runoob')
 
@@ -318,6 +329,7 @@ tinytuple = (123, 'runoob')
 **print** (tuple[2:])     # 输出从第三个元素开始的所有元素
 **print** (tinytuple * 2)   # 输出两次元组
 **print** (tuple + tinytuple) # 连接元组
+```
 
 以上实例输出结果：
 
@@ -334,6 +346,7 @@ abcd
 
 其实，可以**把字符串看作一种特殊的元组。**
 
+```
 \>>> tup = (1, 2, 3, 4, 5, 6)
 \>>> **print**(tup[0])
 1
@@ -343,6 +356,7 @@ abcd
 Traceback (most recent(最近) call last):
  File "<stdin>", line 1, **in** <module>
 TypeError: 'tuple' object(对象) does **not** support(支持) item(项目) assignment(分配)
+```
 
 虽然tuple的元素不可改变，但它可以包含可变的对象，比如list列表。
 
@@ -396,7 +410,8 @@ parame = {value01,value02,...}
 set(value)
 ```
 
-\#!/usr/bin/python3
+```
+#!/usr/bin/python3
 
 sites = {'Google', 'Taobao', 'Runoob', 'Facebook', 'Zhihu', 'Baidu'}
 
@@ -422,6 +437,7 @@ b = set('alacazam')
 **print**(a & b)   # a 和 b 的交集
 
 **print**(a ^ b)   # a 和 b 中不同时存在的元素
+```
 
 以上实例输出结果：
 
@@ -439,7 +455,7 @@ Runoob 在集合中
 
 字典（dictionary）是Python中另一个非常有用的内置数据类型。
 
-> 底层实现是哈希表（Hash Table）
+底层实现是哈希表（Hash Table）
 
 列表是有序的对象集合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是**通过键来存取的，而不是通过偏移存取**。
 
@@ -450,6 +466,7 @@ Runoob 在集合中
 1. 键(key)必须使用**不可变类型**。
 2. 键(key)必须是唯一的。
 
+```
 dict = {}
 dict['one'] = "1 - 菜鸟教程"
 dict[2]   = "2 - 菜鸟工具"
@@ -461,6 +478,7 @@ tinydict = {'name': 'runoob','code':1, 'site': 'www.runoob.com'}
 **print** (tinydict)      # 输出完整的字典
 **print** (tinydict.keys())  # 输出所有键
 **print** (tinydict.values()) # 输出所有值
+```
 
 以上实例输出结果：
 
@@ -474,12 +492,14 @@ dict_values(['runoob', 1, 'www.runoob.com'])
 
 构造函数 dict() 可以直接从**键值对序列**中构建字典如下：
 
+```
 \>>> dict([('Runoob', 1), ('Google', 2), ('Taobao', 3)])
 {'Runoob': 1, 'Google': 2, 'Taobao': 3}
 \>>> {x: x**2 **for** x **in** (2, 4, 6)}
 {2: 4, 4: 16, 6: 36}
 \>>> dict(Runoob=1, Google=2, Taobao=3)
 {'Runoob': 1, 'Google': 2, 'Taobao': 3}
+```
 
 **{x: x\**2 for x in (2, 4, 6)}** 该代码使用的是字典推导式，更多推导式内容可以参考：[Python 推导式](https://www.runoob.com/python3/python-comprehensions.html)。（格式：结果值1 if 判断条件 else 结果2  for 变量名 in 原列表）
 
@@ -512,15 +532,19 @@ x = bytes("hello", encoding="utf-8")
 
 与字符串类型类似，bytes 类型也支持许多操作和方法，如切片、拼接、查找、替换等等。同时，由于 bytes 类型是不可变的，因此在进行修改操作时需要创建一个新的 bytes 对象。例如：
 
+```
 x = b"hello"
 y = x[1:3] # 切片操作，得到 b"el"
 z = x + b"world" # 拼接操作，得到 b"helloworld"
+```
 
 需要注意的是，bytes 类型中的元素是整数值，因此在进行比较操作时需要使用相应的整数值。例如：
 
+```
 x = b"hello"
 **if** x[0] == ord("h"):
   **print**("The first element is 'h'")
+```
 
 其中 ord() 函数用于将字符转换为相应的整数值。
 
@@ -537,8 +561,9 @@ Python 数据类型转换可以分为两种：
 
 以下实例中，我们对两种不同类型的数据进行运算，较低数据类型（整数）就会转换为较高数据类型（浮点数）以避免数据丢失。
 
-> Python的数据类型的"高低"可以按照如下顺序理解：布尔（bool）< 整型（int） < 浮点型（float）< 复数（complex）。这个顺序主要根据数据类型可以表示的信息范围和精度来确定的。
+Python的数据类型的"高低"可以按照如下顺序理解：布尔（bool）< 整型（int） < 浮点型（float）< 复数（complex）。这个顺序主要根据数据类型可以表示的信息范围和精度来确定的。
 
+```
 num_int = 123
 num_flo = 1.23
 
@@ -549,6 +574,7 @@ num_new = num_int + num_flo
 
 **print**("num_new 值为:",num_new)
 **print**("num_new 数据类型为:",type(num_new))
+```
 
 以上实例输出结果为：
 
@@ -561,12 +587,14 @@ num_new 数据类型为: <class 'float'>
 
 我们再看一个实例，整型数据与字符串类型的数据进行相加：
 
+```
 num_int = 123
 num_str = "456"
 
 **print**("num_int 数据类型为:",type(num_int))
 **print**("num_str 数据类型为:",type(num_str))
 **print**(num_int+num_str)
+```
 
 以上实例输出结果为：
 
@@ -587,6 +615,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 
 在显式类型转换中，用户将对象的数据类型转换为所需的数据类型。 我们使用 int()、float()、str() 等预定义函数来执行显式类型转换。
 
+```
 **int()** 强制转换为整型：
 
 x = int(1)  # x 输出结果为 1
@@ -606,8 +635,12 @@ x = str("s1") # x 输出结果为 's1'
 y = str(2)   # y 输出结果为 '2'
 z = str(3.0) # z 输出结果为 '3.0'
 
+
+```
+
 整型和字符串类型进行运算，就可以用强制类型转换来完成：
 
+```
 num_int = 123
 num_str = "456"
 
@@ -621,6 +654,7 @@ num_sum = num_int + num_str
 
 **print**("num_int 与 num_str 相加结果为:",num_sum)
 **print**("sum 数据类型为:",type(num_sum))
+```
 
 以上实例输出结果为：
 
@@ -653,3 +687,46 @@ sum 数据类型为: <class 'int'>
 | [oct(x)](https://www.runoob.com/python3/python-func-oct.html) | 将一个整数转换为一个八进制字符串                        |
 
 并非所有类型的数据都可以被转换成其他任意类型。转换是否可行，主要取决于数据本身是否包含足够的信息来表示目标类型。
+
+## 高级数据类型
+
+### deque
+
+`collections.deque` 和 Python 内置的 `list` 是两种不同的数据结构，它们各有特点和适用场景。以下是它们的主要区别：
+
+1. **双端队列**：
+   - `deque`（双端队列）是一个双向队列，支持在两端快速地添加（append）和弹出（pop）元素。这意味着你可以在 `deque` 的前端和后端快速地进行插入和删除操作。（说明是链表）
+   - `list` 是一个动态数组，主要提供在列表末尾的快速添加和弹出操作。==在列表的开头进行插入和删除操作通常较慢，因为它需要移动所有其他元素来保持连续性。==（说明底层是动态数组）
+
+2. **性能**：
+   - `deque` 在进行前端或后端的插入和删除操作时，时间复杂度为 O(1)，即常数时间。
+   - `list` 在列表末尾进行插入和删除操作的时间复杂度也是 O(1)，但在列表开头进行这些操作的时间复杂度为 O(n)，其中 n 是列表中元素的数量。
+
+3. **内存使用**：
+   - `deque` 通常比 `list` 使用更多的内存，因为它需要额外的空间来支持快速的两端操作。
+
+4. **线程安全性**：
+   - `deque` 可以被设计为线程安全的，允许多个线程同时访问，而 `list` 则不是线程安全的。
+
+5. **功能**：
+   - `deque` 提供了一些额外的功能，如 `rotate()` 方法，它可以在 O(n) 时间内旋转队列中的元素。
+   - `list` 提供了丰富的方法来处理列表，如 `append()`, `extend()`, `insert()`, `remove()`, `pop()`, `sort()` 等。
+
+6. **适用场景**：
+   - 当你需要一个支持快速两端操作的数据结构时，`deque` 是一个更好的选择。
+   - 当你需要一个简单的动态数组，并且主要在列表的末尾添加和删除元素时，`list` 可能更合适。
+
+总的来说，选择 `deque` 还是 `list` 取决于你的具体需求，包括对性能、内存使用和功能的需求。
+
+Python 内置的高级数据结构主要来自标准库中的 `collections` 模块，以下是 `collections` 模块提供的一些高级数据结构：
+
+1. **deque** - 双端队列，支持两端的快速 append 和 pop 操作。
+2. **Counter** - 用于计数的字典子类，可以快速进行元素计数。
+3. **OrderedDict** - 有序字典，保持元素插入的顺序（在 Python 3.7+ 中，普通字典已经是有序的，所以 `OrderedDict` 的特殊性已经减弱）。
+4. **defaultdict** - 默认字典，提供一个默认值的工厂函数，用于在字典中自动为不存在的键生成默认值。
+5. **namedtuple** - 命名元组，允许你创建带有命名字段的元组，使得访问元组的元素更加方便。
+6. **ChainMap** - 链映射，可以同时访问多个字典，类似于一个字典，但映射是按顺序在多个字典中查找。
+7. **UserDict** - 一个简单的字典类，可以作为创建自定义字典类的基类。
+8. **UserList** - 一个简单的列表类，可以作为创建自定义列表类的基类。
+9. **UserString** - 一个简单的字符串类，可以作为创建自定义字符串类的基类。
+
